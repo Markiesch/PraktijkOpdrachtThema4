@@ -1,0 +1,89 @@
+/* 
+    Author: Mark Schuurmans
+    Date: 21-12-2020
+    File: styles/navbar.scss
+
+    Stylesheet Portfolio Project
+
+
+Table of contents
+
+1. Global Styles
+
+2. Typography
+
+3. Layout Styling
+    3.1 Breadcrumbs Styling
+    3.2 Header Styling
+    3.3 Mobile navigation
+    3.4 Burger Menu
+
+3. Componets
+
+4. Mobile Styling
+    4.1 Mobile landscape
+
+5. Print Styles
+*/
+
+/* =================
+     Global Styles
+   ================= */
+
+* {
+    /* Verwijderd alle (onnodige) padding die op alle element van de website zitten */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Zet de font naar "Segoe UI" op alle elementen met paar fallback fonts. */
+    font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+}
+
+:root {
+    --primary-color: hsl(345, 70%, 40%);
+    --background: #efefef;
+}
+
+body {
+    background-color: var(--background);
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+header,
+main {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+header {
+    background-color: gray;
+}
+
+header nav {
+    max-width: 800px;
+    margin: 0 auto;
+    height: 80px;
+    position: relative;
+}
+
+header ul {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header li {
+    list-style: none;
+}
+
+header img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    /* height: 200%; */
+}
