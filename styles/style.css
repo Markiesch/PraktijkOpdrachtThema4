@@ -134,6 +134,15 @@ input:hover {
     background-size: cover;
 }
 
+.bubble {
+    width: 0;
+    transform: translate(-50%, -50%);
+    position: fixed;
+    background: linear-gradient(-45deg, var(--primary-color), var(--primary-accent-color));
+    border-radius: 50%;
+    z-index: 9999999999999;
+}
+
 main {
     padding-top: var(--header-height);
     background-color: white;
@@ -295,6 +304,20 @@ footer .top {
     display: flex;
     align-items: center;
 }
+
+.login--container svg {
+    opacity: 0;
+    transform: translateX(-50%);
+    animation: img-fade-in 600ms ease 400ms forwards;
+}
+
+@keyframes img-fade-in {
+    to {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
 .login--container article:first-of-type {
     z-index: 2;
 }
@@ -308,9 +331,18 @@ footer .top {
     background: linear-gradient(-45deg, var(--primary-color), var(--primary-accent-color));
     top: -100%;
     right: 50%;
-    /* left: 0; */
-    /* transform: translateY(-50%); */
     z-index: 1;
+    animation: fade-in 1s;
+    animation-timing-function: cubic-bezier(0.175, 1, 0.25, 1.1);
+}
+
+@keyframes fade-in {
+    from {
+        transform: scale(3);
+    }
+    to {
+        transform: scale(1);
+    }
 }
 
 form {
