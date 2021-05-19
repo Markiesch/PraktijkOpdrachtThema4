@@ -1,9 +1,9 @@
 /* 
-    Author: Mark Schuurmans
-    Date: 21-12-2020
-    File: styles/navbar.scss
+Author: Mark Schuurmans
+Date: 21-12-2020
+File: styles/style.scss
 
-    Stylesheet Portfolio Project
+Stylesheet Tennisclub Pettelaer
 
 
 Table of contents
@@ -30,13 +30,15 @@ Table of contents
      Global Styles
    ================= */
 
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap");
+
 * {
     /* Verwijderd alle (onnodige) padding die op alle element van de website zitten */
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* Zet de font naar "Segoe UI" op alle elementen met paar fallback fonts. */
-    font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+    /* Zet de font naar "Open Sans" op alle elementen met fallback fonts. */
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
 }
 
 :root {
@@ -48,17 +50,19 @@ Table of contents
     --header-height: 80px;
 }
 
+body {
+    min-height: 100vh;
+    position: relative;
+    padding: var(--header-height) 0 10vh 0;
+}
+
 a {
     color: inherit;
     text-decoration: none;
 }
 
-header {
-    background-color: var(--background);
-}
-
 header nav {
-    background-color: var(--background);
+    background-color: white;
     position: fixed;
     top: 0;
     left: 0;
@@ -143,18 +147,15 @@ input:hover {
     z-index: 9999999999999;
 }
 
-main {
-    padding-top: var(--header-height);
-    background-color: white;
-}
-
 section {
     max-width: 1440px;
     margin: 0 auto;
+    padding: 0 1em;
 }
 
 .intro {
     display: flex;
+    align-items: center;
 }
 
 .intro div {
@@ -209,13 +210,25 @@ section {
     justify-content: space-between;
 }
 
-.contact--section {
-    background-color: white;
-    color: #5d5d5d;
+.intro--section {
+    padding-right: 50%;
+    margin-top: 3em;
+    border-bottom: 1px solid #9c9c9c;
+}
+
+.intro--section p {
+    margin-bottom: 1.5em;
+    font-size: 14px;
+}
+
+.intro--section p:first-of-type {
+    margin-bottom: 1em;
+    font-size: 18px;
 }
 
 .contact--section {
-    min-width: 60%;
+    background-color: white;
+    color: #5d5d5d;
     margin: 200px auto;
     display: flex;
     flex-wrap: wrap;
@@ -256,6 +269,10 @@ section {
 }
 
 footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
     background-color: #111;
     color: white;
     padding: 2em;
@@ -269,170 +286,32 @@ footer div {
     justify-content: space-between;
 }
 
+footer div:first-of-type {
+    margin-bottom: 1em;
+}
+
 footer .top {
     background-color: hsla(0, 0%, 100%, 0.2);
     padding: 0.5em 3em;
     border-radius: 2em;
 }
 
-.login--container {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: white;
-    z-index: 99999;
-    transform: translateX(200%);
-    transition: transform 1200ms ease-out;
+footer input {
+    display: none;
 }
 
-.open {
-    transform: translateX(0);
-}
-
-.content--wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    height: 100%;
-    max-width: 1440px;
-    margin: 0 auto;
-}
-
-.login--container article {
-    flex: 1 1 400px;
-    display: flex;
-    align-items: center;
-}
-
-.login--container svg {
-    opacity: 0;
-    transform: translateX(-50%);
-    animation: img-fade-in 600ms ease 400ms forwards;
-}
-
-@keyframes img-fade-in {
-    to {
-        opacity: 1;
-        transform: translateX(0%);
-    }
-}
-
-.login--container article:first-of-type {
-    z-index: 2;
-}
-
-.login--container::before {
-    content: "";
-    position: absolute;
-    width: 100vw;
-    height: 210vh;
-    border-radius: 50%;
-    background: linear-gradient(-45deg, var(--primary-color), var(--primary-accent-color));
-    top: -100%;
-    right: 50%;
-    z-index: 1;
-    animation: fade-in 1s;
-    animation-timing-function: cubic-bezier(0.175, 1, 0.25, 1.1);
-}
-
-@keyframes fade-in {
-    from {
-        transform: scale(3);
-    }
-    to {
-        transform: scale(1);
-    }
-}
-
-form {
-    flex: 1;
-    text-align: center;
-}
-
-.login--container h2 {
-    color: var(--text-color);
-    font-size: 2.2rem;
-}
-
-.input--container {
-    max-width: 380px;
-    background-color: #f0f0f0;
-    margin: 1em auto;
-    /* height: 55px; */
-    border-radius: 55px;
-    display: grid;
-    grid-template-columns: 15% 85%;
-    padding: 1em 0.4rem;
-    position: relative;
-}
-
-.input--container svg {
-    height: 1.1rem;
-}
-
-.input--container path {
-    fill: #acacac;
-}
-
-.input--container input {
-    background: none;
-    outline: none;
-    border: none;
-    line-height: 1;
-    font-weight: 600;
-    font-size: 1.1rem;
-    color: #333;
-}
-
-.input--container input::placeholder {
-    color: #aaa;
-    font-weight: 500;
-}
-
-.svg--container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.btn {
-    width: 150px;
-    background-color: var(--primary-color);
-    border: none;
-    outline: none;
-    height: 49px;
-    border-radius: 49px;
-    color: #fff;
-    text-transform: uppercase;
-    font-weight: 600;
-    margin: 10px 0;
+footer label {
     cursor: pointer;
-    transition: 0.5s;
+    padding: 0.5em 1em;
+    display: block;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.9);
 }
 
-.btn:hover {
-    background-color: var(--primary-accent-color);
+footer label:hover {
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
-.exit-btn {
-    font-size: 10px;
-    position: absolute;
-    cursor: pointer;
-    top: 1em;
-    left: 1em;
-    z-index: 999999999999999999999;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.exit-btn svg {
-    width: 4em;
-    height: 4em;
-}
-
-.exit-btn path {
-    fill: white;
+footer form {
+    display: inline;
 }

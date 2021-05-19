@@ -26,6 +26,6 @@ function dotEnlarge() {
 
 function transitionEnd() {
     setTimeout(() => {
-        window.location = "pages/login.php";
+        window.location = "/PraktijkOpdrachtThema4/pages/login.php";
     }, transitionTime * 1.5);
 }
