@@ -5,11 +5,13 @@
     </div>
     <?php
         if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] == true) {
-            echo "<div><p>U bent momenteel ingelogd</p>";
-            echo "<form action='/PraktijkOpdrachtThema4/pages/login.php' method='POST'>
-                    <label type='submit' value='Uitloggen' for='logout'>Uitloggen</label>
-                    <input name='logout' type='submit' id='logout' />
-                  </form></div>";
+            echo "<div>
+                    <p>U bent momenteel ingelogd</p>";
+            echo "  <form action='/PraktijkOpdrachtThema4/pages/login.php' method='POST'>
+                        <label type='submit' value='Uitloggen' for='logout'>Uitloggen</label>
+                        <input name='logout' type='submit' id='logout' />
+                    </form>
+                  </div>";
         }
     ?>
 </footer>

@@ -1,3 +1,10 @@
+/*
+    Author: Mark Schuurmans
+    Date: 12-5-2021
+
+    Praktijkopdracht Thema 4
+*/
+
 let lastScrollTop = 0;
 const navbar = document.querySelector("header nav");
 

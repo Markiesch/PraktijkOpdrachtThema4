@@ -4,26 +4,6 @@ Date: 21-12-2020
 File: styles/style.scss
 
 Stylesheet Tennisclub Pettelaer
-
-
-Table of contents
-
-1. Global Styles
-
-2. Typography
-
-3. Layout Styling
-    3.1 Breadcrumbs Styling
-    3.2 Header Styling
-    3.3 Mobile navigation
-    3.4 Burger Menu
-
-3. Componets
-
-4. Mobile Styling
-    4.1 Mobile landscape
-
-5. Print Styles
 */
 
 /* =================
@@ -45,15 +25,18 @@ Table of contents
     --primary-accent-color: hsl(340, 70%, 40%);
     --primary-color: hsl(345, 100%, 40%);
     --primary-color-hsl: 345, 70%, 40%;
-    --background: hsl(202, 100%, 98%);
     --text-color: #444;
     --header-height: 80px;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
     min-height: 100vh;
     position: relative;
-    padding: var(--header-height) 0 10vh 0;
+    padding-top: var(--header-height);
 }
 
 a {
@@ -172,13 +155,13 @@ section {
 
 .sponsors {
     display: flex;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     max-width: 900px;
     flex-wrap: wrap;
     gap: 1rem 3rem;
     align-items: center;
     justify-content: center;
-    background-color: var(--background);
-    border: 0.5em solid white;
     transform: translateY(-50%);
     padding: 0 3em;
     border-radius: 1em;
@@ -188,50 +171,98 @@ section {
     flex: 0 1 150px;
 }
 
-.sponsors img {
+.sponsors svg,
+.sponsors object {
     width: 100%;
 }
 
+.sponsors path,
+.sponsors object {
+    fill: var(--primary-color);
+}
+
 .navigation {
+    max-width: 1440px;
+    margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 2em;
+    gap: 1em;
 }
 
-.navigation > div {
-    flex: 0 1 250px;
+.navigation > a {
+    flex: 1 1 300px;
     font-weight: 600;
+    font-size: 18px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     color: var(--primary-color);
     border-radius: 0.5em;
-    padding: 0.5em;
+    padding: 0.75em;
     display: flex;
     justify-content: space-between;
 }
 
-.intro--section {
-    padding-right: 50%;
-    margin-top: 3em;
-    border-bottom: 1px solid #9c9c9c;
+.navigation span + span {
+    color: #5d5d5d;
+    transition: color 300ms ease;
+    font-weight: 800;
+}
+
+.navigation > a:hover span + span {
+    color: var(--primary-color);
+}
+
+.intro--section h2 {
+    margin: 2.5em 0 0.75em 0;
+    font-size: 30px;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.intro--section div {
+    position: relative;
+    padding-left: 1em;
+}
+.intro--section div::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: var(--primary-color);
 }
 
 .intro--section p {
     margin-bottom: 1.5em;
     font-size: 14px;
-}
-
-.intro--section p:first-of-type {
-    margin-bottom: 1em;
-    font-size: 18px;
+    max-width: 600px;
 }
 
 .contact--section {
+    margin: 5vh auto 5vh auto;
     background-color: white;
     color: #5d5d5d;
-    margin: 200px auto;
     display: flex;
+    align-items: center;
     flex-wrap: wrap;
+    min-height: 30vh;
+    /* height: 30vh; */
+}
+
+.contact--hero h4 {
+    margin-bottom: 0.25em;
+    font-size: 33px;
+    color: #333;
+}
+
+.contact--hero p {
+    margin-bottom: 3em;
+    max-width: 500px;
+}
+
+.contact--hero > div {
+    margin-bottom: 1em;
 }
 
 .contact__link--container {
@@ -261,6 +292,11 @@ section {
     flex: 1 1 300px;
 }
 
+.contact--section img {
+    width: 100%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
 .image--container {
     display: inline-block;
     font-size: 16px;
@@ -269,11 +305,8 @@ section {
 }
 
 footer {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    right: 0;
     background-color: #111;
+    background-color: var(--primary-color);
     color: white;
     padding: 2em;
 }
@@ -284,6 +317,8 @@ footer div {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1em;
 }
 
 footer div:first-of-type {
@@ -305,13 +340,27 @@ footer label {
     padding: 0.5em 1em;
     display: block;
     border-radius: 10px;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(0, 0, 0, 1);
+    transition: background-color 300ms ease;
 }
 
 footer label:hover {
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.9);
 }
 
 footer form {
     display: inline;
+}
+
+@media screen and (max-width: 550px) {
+    .inlog--link svg {
+        margin: 0;
+    }
+    .inlog--link span + span {
+        display: none;
+    }
+
+    header img {
+        height: 100%;
+    }
 }

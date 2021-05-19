@@ -1,3 +1,10 @@
+<!-- 
+    Author: Mark Schuurmans
+    Date: 12-5-2021
+
+    Praktijkopdracht Thema 4    
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,15 +15,15 @@
     <title>Home · BTC de Pettelaer</title>
     <link rel="stylesheet" href="../styles/style.css">
     <link rel="stylesheet" href="../styles/login.css">
-    <script src="../scripts/script.js" defer></script>
+    <script src="../scripts/login.js" defer></script>
 </head>
 <body>
     <?php
     session_start();
 
     if (isset($_POST["logout"])) {
-        session_destroy();
         unset($_SESSION["loggedin"]);
+        echo $_SESSION["loggedin"];
         echo "destroyed";
     } elseif ($_SESSION["loggedin"] == true) {
         header('Location: overzicht.php');
@@ -56,7 +63,7 @@
                 </svg>
             </a>
             <div class="content--wrapper">
-                <article>
+                <article class="image--container">
                     <svg viewBox="0 0 1104.51 798.9">
                         <defs>
                             <linearGradient id="d64dd008-0b7c-476d-9152-2ee1019c24ab" x1="778.88" y1="597.01" x2="778.88" y2="287.01" gradientUnits="userSpaceOnUse">
@@ -142,11 +149,11 @@
                         </div>
                         <div class="input--container">
                             <div class="svg--container">
-                                <svg viewBox="0 0 448 512">
-                                    <path d="M400 224h-24v-72C376 68.2 307.8 0 224 0S72 68.2 72 152v72H48c-26.5 0-48 21.5-48 48v192c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V272c0-26.5-21.5-48-48-48zm-104 0H152v-72c0-39.7 32.3-72 72-72s72 32.3 72 72v72z"></path>
-                                </svg>
+                            <svg class="password--svg" viewBox="0 0 448 512">
+                                <path fill="#acacac" d="M400 224h-24v-72C376 68.2 307.8 0 224 0S72 68.2 72 152v72H48c-26.5 0-48 21.5-48 48v192c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V272c0-26.5-21.5-48-48-48zm-104 0H152v-72c0-39.7 32.3-72 72-72s72 32.3 72 72v72z"></path>
+                            </svg>
                             </div>
-                            <input name="password" type="password" placeholder="Password">
+                            <input class="password--input" name="password" type="password" placeholder="Password">
                         </div>
                         <input type="submit" value="Login" class="btn" />
                     </form>

@@ -3,7 +3,7 @@
         <ul>
             <li>
                 <a href="/praktijkOpdrachtThema4/">
-                    <img src="/PraktijkOpdrachtThema4/images/logo@2x.png" alt="Pettelaer Logo">
+                    <img src="/PraktijkOpdrachtThema4/images/logo.png" alt="Pettelaer Logo">
                 </a>
             </li>
             <li class="inlog--link__container">

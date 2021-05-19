@@ -1,3 +1,10 @@
+/*
+    Author: Mark Schuurmans
+    Date: 12-5-2021
+
+    Praktijkopdracht Thema 4
+*/
+
 const bubble = document.querySelector(".bubble");
 const link = document.querySelector(".inlog--link");
 const transitionTime = 600;

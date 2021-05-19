@@ -1,3 +1,10 @@
+<!-- 
+    Author: Mark Schuurmans
+    Date: 12-5-2021
+
+    Praktijkopdracht Thema 4    
+-->
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -19,61 +26,72 @@
             <div class="bubble"></div>
             <section class="intro background">
                 <div>
-                    <h1>Tennisen bij BTC De Pettelaer</h1>
+                    <h1>Tennissen bij BTC De Pettelaer</h1>
                 </div>
             </section>
             <section class="sponsors">
                 <div>
-                    <img src="images/sponsors/adc.png" alt="ADC">
+                    <a target="_blank" href="https://www.adcrepro.nl/">
+                        <object data="images/sponsors/adc.svg" type="image/svg+xml"></object>
+                    </a>
                 </div>
                 <div>
-                    <img src="images/sponsors/bavaria.png" alt="Bavaria">
+                    <a target="_blank" href="https://nl.bavaria.com/">
+                        <object data="images/sponsors/bavaria.svg" type="image/svg+xml"></object>
+                    </a>
                 </div>
                 <div>
-                    <img src="images/sponsors/DutchlawDesk.png" alt="Dutchlawdesk">
+                    <a target="_blank" href="https://www.vlc-partners.nl/">
+                        <object data="images/sponsors/vlc.svg" type="image/svg+xml"></object>
+                    </a>
                 </div>
                 <div>
-                    <img src="images/sponsors/head.png" alt="head">
+                    <a target="_blank" href="https://www.dutchlawdesk.com/">
+                        <object data="images/sponsors/dutchlawdesk.svg" type="image/svg+xml"></object>
+                    </a>
                 </div>
             </section>
 
             <section class="navigation">
-                <div>
-                    <p>Vereniging</p><span>></span>
-                </div>
-                <div>
-                    <p>Lidmaatschap</p>
-                </div>
-                <div>
-                    <p>Training</p>
-                </div>
-                <div>
-                    <p>Competitie</p>
-                </div>
-                <div>
-                    <p>Toernooien</p>
-                </div>
-                <div>
-                    <p>Agenda</p>
-                </div>
-                <div>
-                    <p>Jeugd</p>
-                </div>
-                <div>
-                    <p>Banen overzicht</p>
-                </div>
+                <a href="https://www.pettelaer.nl/index.php?page=Paviljoen&usetabs&sid=2">
+                    <span>Vereniging</span><span>></span>
+                </a>
+                <a href="https://www.pettelaer.nl/index.php?page=Lidmaatschap&usetabs&sid=2">
+                    <span>Lidmaatschap</span><span>></span>
+                </a>
+                <a href="https://www.pettelaer.nl/index.php?page=Training&sid=2">
+                    <span>Training</span><span>></span>
+                </a>
+                <a href="https://www.pettelaer.nl/index.php?page=Competitie_algemeen&usetabs&sid=2">
+                    <span>Competitie</span><span>></span>
+                </a>
+                <a href="https://www.pettelaer.nl/index.php?page=Toernooien&sid=2">
+                    <span>Toernooien</span><span>></span>
+                </a>
+                <a href="https://www.pettelaer.nl/index.php?page=Agenda&sid=2">
+                    <span>Agenda</span><span>></span>
+                </a>
+                <a href="https://www.pettelaer.nl/index.php?page=Jeugd&usetabs&sid=2">
+                    <span>Jeugd</span><span>></span>
+                </a>
+                <a href="https://www.pettelaer.nl/index.php?page=Banen_overzicht&usetabs&sid=2">
+                    <span>Banen overzicht</span><span>></span>
+                </a>
             </section>
 
             <section class="intro--section">
-                <p>Welkom</p>
-                <p>BTC De Pettelaer is een bourgondische tennisclub in het hart van de sfeervolle stad 's-Hertogenbosch. Een tennisclub voor jong en oud, prestatieve en recreatieve spelers. Bij De Pettelaer gaan sportiviteit en gezelligheid hand in hand. In de prachtige atmosfeer van clubhuis 'De Knotwilg' wordt gelachen, gegeten en gedronken.</p>
-                <p>Tot snel op ons park!</p>
-                <p>Patrick van Druten (voorzitter)</p>
+                <h2>Welkom!</h2>
+                <div>
+                    <p>BTC De Pettelaer is een bourgondische tennisclub in het hart van de sfeervolle stad 's-Hertogenbosch. Een tennisclub voor jong en oud, prestatieve en recreatieve spelers. Bij De Pettelaer gaan sportiviteit en gezelligheid hand in hand. In de prachtige atmosfeer van clubhuis 'De Knotwilg' wordt gelachen, gegeten en gedronken.</p>
+                    <p>Tot snel op ons park!</p>
+                    <p>Patrick van Druten (voorzitter)</p>
+                </div>
             </section>
 
             <section class="contact--section">
-                <div>
+                <div class="contact--hero">
                     <h4>Contact informatie</h4>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem, illo ex. Dolorum sed, ea temporibus provident, amet voluptates aliquid delectus natus error, voluptate vero? Iure.</p>
                     <div>
                         <div class="image--container">
                             <svg viewBox="0 0 512 512">
@@ -98,9 +116,13 @@
                         </div>
                         <a href="https://www.google.com/maps/place/Coornhertstraat+24,+5216+HX+'s-Hertogenbosch" target="_blank">Coornhertstraat 24, 5216 HX 's-Hertogenbosch</a>
                     </div>
-                </div>
+                </div>  
                 <div>
-                    <a href="https://www.pettelaer.nl/index.php?page=Parkeren&sid=5">Parkeren</a>
+                    <div>
+                        <a target="_blank" href="https://www.google.com/maps/place/Coornhertstraat+24,+5216+HX+'s-Hertogenbosch">
+                            <img src="images/map.png" alt="">
+                        </a>
+                    </div>
                 </div>
             </section>
         </main>

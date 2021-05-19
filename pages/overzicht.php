@@ -1,3 +1,10 @@
+<!-- 
+    Author: Mark Schuurmans
+    Date: 12-5-2021
+
+    Praktijkopdracht Thema 4    
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -93,6 +100,8 @@
             $username = isset($_POST["username"]) ? $_POST["username"] : false;
             $password = isset($_POST["password"]) ? $_POST["password"] : false;
             $loginBtn = "<a class='loginBtn' href='login.php'>Inloggen</a>";
+
+            if (isset($_SESSION["loggedin"])) return loadTable($data[0], $data[1], $data[2], $data[3]);
 
             if (!$username || !$password) {
                 echo "<p class='wrong--password'>U heeft geen gebruiksnaam en/of wachtwoord ingevuld.</p>

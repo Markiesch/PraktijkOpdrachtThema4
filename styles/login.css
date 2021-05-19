@@ -1,3 +1,10 @@
+/*
+    Author: Mark Schuurmans
+    Date: 16-5-2021
+
+    Praktijkopdracht Thema 4
+*/
+
 .login--container {
     position: fixed;
     top: 0;
@@ -28,7 +35,7 @@
     align-items: center;
 }
 
-.login--container svg {
+.image--container svg {
     opacity: 0;
     transform: translateX(-50%);
     animation: img-fade-in 600ms ease 400ms forwards;
@@ -91,7 +98,7 @@ form {
 }
 
 .input--container svg {
-    height: 1.1rem;
+    width: 1.1rem;
 }
 
 .input--container path {
@@ -111,6 +118,10 @@ form {
 .input--container input::placeholder {
     color: #aaa;
     font-weight: 500;
+}
+
+.password--svg {
+    cursor: pointer;
 }
 
 .svg--container {
@@ -158,4 +169,12 @@ form {
 
 .exit-btn path {
     fill: white;
+}
+
+@media screen and (max-width: 800px) {
+    .login--container::before {
+        width: 130vw;
+        height: 110vh;
+        top: -50%;
+    }
 }

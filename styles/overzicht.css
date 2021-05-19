@@ -1,9 +1,22 @@
+/*
+    Author: Mark Schuurmans
+    Date: 18-5-2021
+
+    Praktijkopdracht Thema 4
+*/
+
+body {
+    margin: 0;
+    padding: 0;
+}
 section {
-    margin-top: 20vh;
+    padding: 175px 0 200px 0;
+    min-height: 100vh;
     text-align: center;
 }
 
 table {
+    max-width: 900px;
     margin: 0 auto;
     text-align: left;
     border-collapse: collapse;
@@ -12,15 +25,9 @@ table {
 table td,
 table th {
     padding: 0.25em;
-    border: 2px solid #555;
-}
-
-table th {
+    border: 1px solid #555;
+    font-size: clamp(0.5rem, 0.125rem + 1.6667vw, 1rem);
     color: #222;
-}
-
-table td {
-    color: #444;
 }
 
 .wrong--password {
@@ -39,4 +46,11 @@ table td {
 
 .loginBtn:hover {
     background-color: rgba(220, 220, 220, 1);
+}
+
+footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
 }
