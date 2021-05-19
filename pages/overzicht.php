@@ -15,12 +15,15 @@
     <title>Home · BTC de Pettelaer</title>
     <link rel="stylesheet" href="../styles/style.css">
     <link rel="stylesheet" href="../styles/overzicht.css">
+        <!-- Defer zorgt ervoor dat de script pas na de HTML/PHP wordt ingeladen -->
     <script src="../scripts/script.js" defer></script>
 </head>
 <body>
     <?php
-        include "../includes/header.php";
+        // Het starten van de sessie (nodig om session data op te halen)
         session_start();
+        // Invoegen Header
+        include "../includes/header.php";
         
         echo "<section>";
         $data = [

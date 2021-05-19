@@ -10,6 +10,7 @@ Stylesheet Tennisclub Pettelaer
      Global Styles
    ================= */
 
+/* Import Open Sans font */
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap");
 
 * {
@@ -22,6 +23,7 @@ Stylesheet Tennisclub Pettelaer
 }
 
 :root {
+    /* Variablen declareren */
     --primary-accent-color: hsl(340, 70%, 40%);
     --primary-color: hsl(345, 100%, 40%);
     --primary-color-hsl: 345, 70%, 40%;
@@ -30,6 +32,7 @@ Stylesheet Tennisclub Pettelaer
 }
 
 html {
+    /* Zorgt ervoor dat een link met een # (id) "smooth" gaat */
     scroll-behavior: smooth;
 }
 
@@ -44,6 +47,9 @@ a {
     text-decoration: none;
 }
 
+/* =================
+     Header Styles
+   ================= */
 header nav {
     background-color: white;
     position: fixed;
@@ -91,6 +97,7 @@ input {
 
 input:focus,
 input:hover {
+    /* Verwijderd lelijke outline wanneer je op een input klikt */
     outline: none;
 }
 
@@ -117,7 +124,9 @@ input:hover {
     margin: 0 auto;
     overflow: hidden;
     background-image: url("../images/btc.jpg");
+    /* Zet de achtergrond afbeelding in het midden van het element */
     background-position: center center;
+    /* Maakt de achtergrond afbeelding de volle breedte en hoogte van het element */
     background-size: cover;
 }
 
@@ -127,9 +136,12 @@ input:hover {
     position: fixed;
     background: linear-gradient(-45deg, var(--primary-color), var(--primary-accent-color));
     border-radius: 50%;
-    z-index: 9999999999999;
+    z-index: 9999999;
 }
 
+/* =================
+     Secion Styles
+   ================= */
 section {
     max-width: 1440px;
     margin: 0 auto;
@@ -148,6 +160,7 @@ section {
 
 .intro h1 {
     background-color: rgba(255, 255, 255, 0.5);
+    /* clamp(min, ideal, max) font size */
     font-size: clamp(2rem, 1.5rem + 2.25vw, 3.5rem);
     display: inline-block;
     padding: 0.25em;
@@ -208,6 +221,7 @@ section {
     font-weight: 800;
 }
 
+/* Selecteerd alle spans behalve de eerste wanneer je over de link hovert */
 .navigation > a:hover span + span {
     color: var(--primary-color);
 }
@@ -304,6 +318,9 @@ section {
     fill: #c03;
 }
 
+/* =================
+     Footer Styles
+   ================= */
 footer {
     background-color: #111;
     background-color: var(--primary-color);
@@ -352,6 +369,10 @@ footer form {
     display: inline;
 }
 
+/* =====================
+     Responsive Styles
+   ===================== */
+/* Veranderd styling van header wanneer het beeldscherm kleiner wordt dat 550px */
 @media screen and (max-width: 550px) {
     .inlog--link svg {
         margin: 0;

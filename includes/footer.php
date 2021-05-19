@@ -4,6 +4,7 @@
         <a class="top" href="#top">Terug naar boven</a>
     </div>
     <?php
+        // Laad alleen deze content zien wanneer de gebruiker is ingelogd
         if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] == true) {
             echo "<div>
                     <p>U bent momenteel ingelogd</p>";

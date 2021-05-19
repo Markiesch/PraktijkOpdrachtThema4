@@ -14,13 +14,16 @@
         <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
         <title>Home · BTC de Pettelaer</title>
         <link rel="stylesheet" href="styles/style.css">
+        <!-- Defer zorgt ervoor dat de script pas na de HTML/PHP wordt ingeladen -->
         <script src="scripts/script.js" defer></script>
         <script src="scripts/index.js" defer></script>
     </head>
     <body>
         <?php 
-            session_start();
-            include "includes/header.php";
+        // Het starten van de sessie (nodig om session data op te halen)
+        session_start();
+        // Invoegen Header
+        include "includes/header.php";
         ?>
         <main>
             <div class="bubble"></div>
@@ -127,7 +130,8 @@
             </section>
         </main>
         <?php 
-            include "includes/footer.php";
+        // Invoegen footer
+        include "includes/footer.php";
         ?>
     </body>
 </html>

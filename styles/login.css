@@ -171,6 +171,7 @@ form {
     fill: white;
 }
 
+/* Override styles voor wanneer het beeldscherm kleiner is dan 800px */
 @media screen and (max-width: 800px) {
     .login--container::before {
         width: 130vw;
