@@ -14,4 +14,7 @@
 <br />
 <br />
 
-![Landing page](https://raw.githubusercontent.com/Markiesch/portfolio/master/images/projects/pettelaer/homepage.png "Landing Page")
+![Mockup](https://raw.githubusercontent.com/Markiesch/portfolio/main/src/assets/mockups/pettelaer.png "Mockup")
+![Homepage](https://raw.githubusercontent.com/Markiesch/portfolio/main/src/assets/projects/pettelaer/homepage.png "Homepage")
+![login page](https://raw.githubusercontent.com/Markiesch/portfolio/main/src/assets/projects/pettelaer/login.png "login page")
+![overzicht page](https://raw.githubusercontent.com/Markiesch/portfolio/main/src/assets/projects/pettelaer/overzicht.png "overzicht page")
