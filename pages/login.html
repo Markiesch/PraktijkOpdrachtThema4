@@ -1,0 +1,65 @@
+<!-- 
+    Author: Mark Schuurmans
+    Date: 12-5-2021
+
+    Praktijkopdracht Thema 4    
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon" />
+    <title>Home · BTC de Pettelaer</title>
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="stylesheet" href="../styles/login.css" />
+    <script src="../scripts/login.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <div class="login--container open">
+        <a href="../index.html" class="exit-btn">
+          <svg viewBox="0 0 320 512">
+            <path
+              d="M207.6 256l107.72-107.72c6.23-6.23 6.23-16.34 0-22.58l-25.03-25.03c-6.23-6.23-16.34-6.23-22.58 0L160 208.4 52.28 100.68c-6.23-6.23-16.34-6.23-22.58 0L4.68 125.7c-6.23 6.23-6.23 16.34 0 22.58L112.4 256 4.68 363.72c-6.23 6.23-6.23 16.34 0 22.58l25.03 25.03c6.23 6.23 16.34 6.23 22.58 0L160 303.6l107.72 107.72c6.23 6.23 16.34 6.23 22.58 0l25.03-25.03c6.23-6.23 6.23-16.34 0-22.58L207.6 256z"
+            ></path>
+          </svg>
+        </a>
+        <div class="content--wrapper">
+          <article class="image--container">
+            <img src="../images/login.svg" alt="login" />
+          </article>
+          <article class="form--container">
+            <form action="overzicht.html" method="POST">
+              <h2>Inloggen</h2>
+              <div class="input--container">
+                <div class="svg--container">
+                  <svg viewBox="0 0 448 512">
+                    <path
+                      d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm89.6 32h-16.7c-22.2 10.2-46.9 16-72.9 16s-50.6-5.8-72.9-16h-16.7C60.2 288 0 348.2 0 422.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-41.6c0-74.2-60.2-134.4-134.4-134.4z"
+                    ></path>
+                  </svg>
+                </div>
+
+                <input name="username" type="text" placeholder="Username" required />
+              </div>
+              <div class="input--container">
+                <div class="svg--container">
+                  <svg class="password--svg" viewBox="0 0 448 512">
+                    <path
+                      d="M400 224h-24v-72C376 68.2 307.8 0 224 0S72 68.2 72 152v72H48c-26.5 0-48 21.5-48 48v192c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V272c0-26.5-21.5-48-48-48zm-104 0H152v-72c0-39.7 32.3-72 72-72s72 32.3 72 72v72z"
+                    ></path>
+                  </svg>
+                </div>
+                <input class="password--input" name="password" type="password" placeholder="Password" required />
+              </div>
+              <input type="submit" value="Login" class="btn" />
+            </form>
+          </article>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

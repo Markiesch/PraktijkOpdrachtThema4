@@ -1,181 +1,174 @@
-/*
-    Author: Mark Schuurmans
-    Date: 16-5-2021
-
-    Praktijkopdracht Thema 4
-*/
-
 .login--container {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: white;
-    z-index: 99999;
-    transform: translateX(200%);
-    transition: transform 1200ms ease-out;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  z-index: 99999;
+  transform: translateX(200%);
+  transition: transform 1200ms ease-out;
 }
 
 .open {
-    transform: translateX(0);
+  transform: translateX(0);
 }
 
 .content--wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    height: 100%;
-    max-width: 1440px;
-    margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 .login--container article {
-    flex: 1 1 400px;
-    display: flex;
-    align-items: center;
+  flex: 1 1 400px;
+  display: flex;
+  align-items: center;
 }
 
 .image--container svg {
-    opacity: 0;
-    transform: translateX(-50%);
-    animation: img-fade-in 600ms ease 400ms forwards;
+  opacity: 0;
+  transform: translateX(-50%);
+  animation: img-fade-in 600ms ease 400ms forwards;
 }
 
 @keyframes img-fade-in {
-    to {
-        opacity: 1;
-        transform: translateX(0%);
-    }
+  to {
+    opacity: 1;
+    transform: translateX(0%);
+  }
 }
 
 .login--container article:first-of-type {
-    z-index: 2;
+  z-index: 2;
 }
 
 .login--container::before {
-    content: "";
-    position: absolute;
-    width: 100vw;
-    height: 210vh;
-    border-radius: 50%;
-    background: linear-gradient(-45deg, var(--primary-color), var(--primary-accent-color));
-    top: -100%;
-    right: 50%;
-    z-index: 1;
-    animation: fade-in 1s;
-    animation-timing-function: cubic-bezier(0.175, 1, 0.25, 1.1);
+  content: "";
+  position: absolute;
+  width: 100vw;
+  height: 210vh;
+  border-radius: 50%;
+  background: linear-gradient(-45deg, var(--primary-color), var(--primary-accent-color));
+  top: -100%;
+  right: 50%;
+  z-index: 1;
+  animation: fade-in 1s;
+  animation-timing-function: cubic-bezier(0.175, 1, 0.25, 1.1);
 }
 
 @keyframes fade-in {
-    from {
-        transform: scale(3);
-    }
-    to {
-        transform: scale(1);
-    }
+  from {
+    transform: scale(3);
+  }
+  to {
+    transform: scale(1);
+  }
 }
 
 form {
-    flex: 1;
-    text-align: center;
+  flex: 1;
+  text-align: center;
 }
 
 .login--container h2 {
-    color: var(--text-color);
-    font-size: 2.2rem;
+  color: var(--text-color);
+  font-size: 2.2rem;
 }
 
 .input--container {
-    max-width: 380px;
-    background-color: #f0f0f0;
-    margin: 1em auto;
-    /* height: 55px; */
-    border-radius: 55px;
-    display: grid;
-    grid-template-columns: 15% 85%;
-    padding: 1em 0.4rem;
-    position: relative;
+  max-width: 380px;
+  background-color: #f0f0f0;
+  margin: 1em auto;
+  /* height: 55px; */
+  border-radius: 55px;
+  display: grid;
+  grid-template-columns: 15% 85%;
+  padding: 1em 0.4rem;
+  position: relative;
 }
 
 .input--container svg {
-    width: 1.1rem;
+  width: 1.1rem;
 }
 
 .input--container path {
-    fill: #acacac;
+  fill: #acacac;
 }
 
 .input--container input {
-    background: none;
-    outline: none;
-    border: none;
-    line-height: 1;
-    font-weight: 600;
-    font-size: 1.1rem;
-    color: #333;
+  background: none;
+  outline: none;
+  border: none;
+  line-height: 1;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #333;
 }
 
 .input--container input::placeholder {
-    color: #aaa;
-    font-weight: 500;
+  color: #aaa;
+  font-weight: 500;
 }
 
 .password--svg {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .svg--container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .btn {
-    width: 150px;
-    background-color: var(--primary-color);
-    border: none;
-    outline: none;
-    height: 49px;
-    border-radius: 49px;
-    color: #fff;
-    text-transform: uppercase;
-    font-weight: 600;
-    margin: 10px 0;
-    cursor: pointer;
-    transition: 0.5s;
+  width: 150px;
+  background-color: var(--primary-color);
+  border: none;
+  outline: none;
+  height: 49px;
+  border-radius: 49px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin: 10px 0;
+  cursor: pointer;
+  transition: 0.5s;
 }
 
 .btn:hover {
-    background-color: var(--primary-accent-color);
+  background-color: var(--primary-accent-color);
 }
 
 .exit-btn {
-    font-size: 10px;
-    position: absolute;
-    cursor: pointer;
-    top: 1em;
-    left: 1em;
-    z-index: 999999999999999999999;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  font-size: 10px;
+  position: absolute;
+  cursor: pointer;
+  top: 1em;
+  left: 1em;
+  z-index: 999999999999999999999;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .exit-btn svg {
-    width: 4em;
-    height: 4em;
+  width: 4em;
+  height: 4em;
 }
 
 .exit-btn path {
-    fill: white;
+  fill: white;
 }
 
 /* Override styles voor wanneer het beeldscherm kleiner is dan 800px */
 @media screen and (max-width: 800px) {
-    .login--container::before {
-        width: 130vw;
-        height: 110vh;
-        top: -50%;
-    }
+  .login--container::before {
+    width: 130vw;
+    height: 110vh;
+    top: -50%;
+  }
 }

@@ -1,11 +1,3 @@
-/* 
-Author: Mark Schuurmans
-Date: 21-12-2020
-File: styles/style.scss
-
-Stylesheet Tennisclub Pettelaer
-*/
-
 /* =================
      Global Styles
    ================= */
@@ -14,374 +6,364 @@ Stylesheet Tennisclub Pettelaer
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap");
 
 * {
-    /* Verwijderd alle (onnodige) padding die op alle element van de website zitten */
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    /* Zet de font naar "Open Sans" op alle elementen met fallback fonts. */
-    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
 }
 
 :root {
-    /* Variablen declareren */
-    --primary-accent-color: hsl(340, 70%, 40%);
-    --primary-color: hsl(345, 100%, 40%);
-    --primary-color-hsl: 345, 70%, 40%;
-    --text-color: #444;
-    --header-height: 80px;
+  --primary-accent-color: hsl(340, 70%, 40%);
+  --primary-color: hsl(345, 100%, 40%);
+  --primary-color-hsl: 345, 70%, 40%;
+  --text-color: #444;
+  --header-height: 80px;
 }
 
 html {
-    /* Zorgt ervoor dat een link met een # (id) "smooth" gaat */
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-    min-height: 100vh;
-    position: relative;
-    padding-top: var(--header-height);
+  min-height: 100vh;
+  position: relative;
+  padding-top: var(--header-height);
 }
 
 a {
-    color: inherit;
-    text-decoration: none;
+  color: inherit;
+  text-decoration: none;
 }
 
 /* =================
      Header Styles
    ================= */
 header nav {
-    background-color: white;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    z-index: 999;
-    transition: transform 600ms ease;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 999;
+  transition: transform 600ms ease;
 }
 
 header ul {
-    max-width: 900px;
-    margin: 0 auto;
-    height: var(--header-height);
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  max-width: 900px;
+  margin: 0 auto;
+  height: var(--header-height);
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 header li {
-    list-style: none;
+  list-style: none;
 }
 
 nav img {
-    position: absolute;
-    left: 0;
-    top: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 
 .inlog--link,
 .search--container {
-    font-size: 14px;
-    display: inline-block;
-    padding: 0.5em 1em;
-    border: 3px solid #c03;
-    border-radius: 0.5em;
+  font-size: 14px;
+  display: inline-block;
+  padding: 0.5em 1em;
+  border: 3px solid #c03;
+  border-radius: 0.5em;
 }
 
 input {
-    border: none;
-    background: transparent;
+  border: none;
+  background: transparent;
 }
 
 input:focus,
 input:hover {
-    /* Verwijderd lelijke outline wanneer je op een input klikt */
-    outline: none;
+  outline: none;
 }
 
 .inlog--link {
-    background-color: #c03;
-    color: white;
+  background-color: #c03;
+  color: white;
 }
 
 .inlog--link svg {
-    fill: white;
-    height: 1em;
-    margin-right: 0.5em;
+  fill: white;
+  height: 1em;
+  margin-right: 0.5em;
 }
 
 .search--container svg {
-    height: 1em;
-    margin-right: 0.5em;
-    fill: #c03;
+  height: 1em;
+  margin-right: 0.5em;
+  fill: #c03;
 }
 
 .background {
-    height: 50vh;
-    max-width: 1440px;
-    margin: 0 auto;
-    overflow: hidden;
-    background-image: url("../images/btc.jpg");
-    /* Zet de achtergrond afbeelding in het midden van het element */
-    background-position: center center;
-    /* Maakt de achtergrond afbeelding de volle breedte en hoogte van het element */
-    background-size: cover;
+  height: 50vh;
+  max-width: 1440px;
+  margin: 0 auto;
+  overflow: hidden;
+  background-image: url("../images/btc.jpg");
+  background-position: center center;
+  background-size: cover;
 }
 
 .bubble {
-    width: 0;
-    transform: translate(-50%, -50%);
-    position: fixed;
-    background: linear-gradient(-45deg, var(--primary-color), var(--primary-accent-color));
-    border-radius: 50%;
-    z-index: 9999999;
+  width: 0;
+  transform: translate(-50%, -50%);
+  position: fixed;
+  background: linear-gradient(-45deg, var(--primary-color), var(--primary-accent-color));
+  border-radius: 50%;
+  z-index: 9999999;
 }
 
 /* =================
      Secion Styles
    ================= */
 section {
-    max-width: 1440px;
-    margin: 0 auto;
-    padding: 0 1em;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 1em;
 }
 
 .intro {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .intro div {
-    flex: 1 1 400px;
-    color: black;
+  flex: 1 1 400px;
+  color: black;
 }
 
 .intro h1 {
-    background-color: rgba(255, 255, 255, 0.5);
-    /* clamp(min, ideal, max) font size */
-    font-size: clamp(2rem, 1.5rem + 2.25vw, 3.5rem);
-    display: inline-block;
-    padding: 0.25em;
+  background-color: rgba(255, 255, 255, 0.5);
+  font-size: clamp(2rem, 1.5rem + 2.25vw, 3.5rem);
+  display: inline-block;
+  padding: 0.25em;
 }
 
 .sponsors {
-    display: flex;
-    background-color: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    max-width: 900px;
-    flex-wrap: wrap;
-    gap: 1rem 3rem;
-    align-items: center;
-    justify-content: center;
-    transform: translateY(-50%);
-    padding: 0 3em;
-    border-radius: 1em;
+  display: flex;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  max-width: 900px;
+  flex-wrap: wrap;
+  gap: 1rem 3rem;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-50%);
+  padding: 0 3em;
+  border-radius: 1em;
 }
 
 .sponsors div {
-    flex: 0 1 150px;
+  flex: 0 1 150px;
 }
 
 .sponsors svg,
 .sponsors object {
-    width: 100%;
+  width: 100%;
 }
 
 .sponsors path,
 .sponsors object {
-    fill: var(--primary-color);
+  fill: var(--primary-color);
 }
 
 .navigation {
-    max-width: 1440px;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1em;
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1em;
 }
 
 .navigation > a {
-    flex: 1 1 300px;
-    font-weight: 600;
-    font-size: 18px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    color: var(--primary-color);
-    border-radius: 0.5em;
-    padding: 0.75em;
-    display: flex;
-    justify-content: space-between;
+  flex: 1 1 300px;
+  font-weight: 600;
+  font-size: 18px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  color: var(--primary-color);
+  border-radius: 0.5em;
+  padding: 0.75em;
+  display: flex;
+  justify-content: space-between;
 }
 
 .navigation span + span {
-    color: #5d5d5d;
-    transition: color 300ms ease;
-    font-weight: 800;
+  color: #5d5d5d;
+  transition: color 300ms ease;
+  font-weight: 800;
 }
 
 /* Selecteerd alle spans behalve de eerste wanneer je over de link hovert */
 .navigation > a:hover span + span {
-    color: var(--primary-color);
+  color: var(--primary-color);
 }
 
 .intro--section h2 {
-    margin: 2.5em 0 0.75em 0;
-    font-size: 30px;
-    font-weight: 600;
-    color: var(--primary-color);
+  margin: 2.5em 0 0.75em 0;
+  font-size: 30px;
+  font-weight: 600;
+  color: var(--primary-color);
 }
 
 .intro--section div {
-    position: relative;
-    padding-left: 1em;
+  position: relative;
+  padding-left: 1em;
 }
 .intro--section div::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    width: 2px;
-    background-color: var(--primary-color);
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: var(--primary-color);
 }
 
 .intro--section p {
-    margin-bottom: 1.5em;
-    font-size: 14px;
-    max-width: 600px;
+  margin-bottom: 1.5em;
+  font-size: 14px;
+  max-width: 600px;
 }
 
 .contact--section {
-    margin: 5vh auto 5vh auto;
-    background-color: white;
-    color: #5d5d5d;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    min-height: 30vh;
-    /* height: 30vh; */
+  margin: 5vh auto 5vh auto;
+  background-color: white;
+  color: #5d5d5d;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  min-height: 30vh;
 }
 
 .contact--hero h4 {
-    margin-bottom: 0.25em;
-    font-size: 33px;
-    color: #333;
+  margin-bottom: 0.25em;
+  font-size: 33px;
+  color: #333;
 }
 
 .contact--hero p {
-    margin-bottom: 3em;
-    max-width: 500px;
+  margin-bottom: 3em;
+  max-width: 500px;
 }
 
 .contact--hero > div {
-    margin-bottom: 1em;
+  margin-bottom: 1em;
 }
 
 .contact__link--container {
-    margin-top: 1.5em;
+  margin-top: 1.5em;
 }
 
 .contact--section svg {
-    height: 1em;
+  height: 1em;
 }
 
 .contact__link--container a {
-    display: block;
-    background-color: hsl(0, 0%, 95%);
-    max-width: 200px;
-    padding: 0.25em;
-    text-align: center;
-    border-radius: 0.25em;
-    font-size: 14px;
-    color: hsla(0, 0%, 0%, 0.9);
+  display: block;
+  background-color: hsl(0, 0%, 95%);
+  max-width: 200px;
+  padding: 0.25em;
+  text-align: center;
+  border-radius: 0.25em;
+  font-size: 14px;
+  color: hsla(0, 0%, 0%, 0.9);
 }
 
 .contact__link--container a:first-of-type {
-    margin-bottom: 0.25em;
+  margin-bottom: 0.25em;
 }
 
 .contact--section > div {
-    flex: 1 1 300px;
+  flex: 1 1 300px;
 }
 
 .contact--section img {
-    width: 100%;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
 .image--container {
-    display: inline-block;
-    font-size: 16px;
-    width: 40px;
-    fill: #c03;
+  display: inline-block;
+  font-size: 16px;
+  width: 40px;
+  fill: #c03;
 }
 
 /* =================
      Footer Styles
    ================= */
 footer {
-    background-color: #111;
-    background-color: var(--primary-color);
-    color: white;
-    padding: 2em;
+  background-color: #111;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 2em;
 }
 
 footer div {
-    max-width: 900px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 1em;
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1em;
 }
 
 footer div:first-of-type {
-    margin-bottom: 1em;
+  margin-bottom: 1em;
 }
 
 footer .top {
-    background-color: hsla(0, 0%, 100%, 0.2);
-    padding: 0.5em 3em;
-    border-radius: 2em;
+  background-color: hsla(0, 0%, 100%, 0.2);
+  padding: 0.5em 3em;
+  border-radius: 2em;
 }
 
 footer input {
-    display: none;
+  display: none;
 }
 
 footer label {
-    cursor: pointer;
-    padding: 0.5em 1em;
-    display: block;
-    border-radius: 10px;
-    background-color: rgba(0, 0, 0, 1);
-    transition: background-color 300ms ease;
+  cursor: pointer;
+  padding: 0.5em 1em;
+  display: block;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 1);
+  transition: background-color 300ms ease;
 }
 
 footer label:hover {
-    background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.9);
 }
 
 footer form {
-    display: inline;
+  display: inline;
 }
 
 /* =====================
      Responsive Styles
    ===================== */
-/* Veranderd styling van header wanneer het beeldscherm kleiner wordt dat 550px */
 @media screen and (max-width: 550px) {
-    .inlog--link svg {
-        margin: 0;
-    }
-    .inlog--link span + span {
-        display: none;
-    }
+  .inlog--link svg {
+    margin: 0;
+  }
+  .inlog--link span + span {
+    display: none;
+  }
 
-    header img {
-        height: 100%;
-    }
+  header img {
+    height: 100%;
+  }
 }
